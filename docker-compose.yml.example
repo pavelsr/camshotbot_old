@@ -2,7 +2,7 @@ version: '2'
 
 services:
 
-  fabschool2017_winter:
+  bot:
     restart: always
     build: .
     image: pavelsr/camerabot
