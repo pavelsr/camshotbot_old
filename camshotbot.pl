@@ -10,8 +10,8 @@ use Net::Ping;
 use Date::Format;
 use Telegram::Bot::Message;
 
-my $config = plugin 'Config';
-plugin( 'Webtail', file => $config->{log_file});
+my $config = plugin 'Config' => { file => 'camshotbot.conf' };
+plugin( 'Webtail', file => $config->{log_file} );
 # https://metacpan.org/pod/Mojolicious::Plugin::Webtail
 
 BEGIN { $ENV{TELEGRAM_BOTAPI_DEBUG}=1 };
